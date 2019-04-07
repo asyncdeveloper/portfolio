@@ -906,6 +906,10 @@ textarea.form-control {
     -moz-osx-font-smoothing: grayscale
 }
 
+.mdi-git:before {
+    content: "\F2A2"
+}
+
 .mdi-github-circle:before {
     content: "\F2A4"
 }
@@ -1647,11 +1651,6 @@ button:focus {
 
 .work_box .work_detail h4 {
     font-size: 18px;
-}
-
-.work_box .work_detail p {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
 }
 
 .work_box:hover .work_detail {
