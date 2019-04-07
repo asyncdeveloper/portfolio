@@ -1,5 +1,5 @@
 # IntelliJ project files
-/.idea
+.idea
 *.iml
 out
 
@@ -27,3 +27,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Node modules
+node_modules
