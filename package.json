@@ -18,7 +18,9 @@
   "devDependencies": {
     "canvas": "^2.4.1",
     "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
     "grunt-processhtml": "^0.4.2",
     "grunt-uncss": "^0.8.6"
   }

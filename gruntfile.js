@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         uncss: {
             dist: {
                 files: [
-                    { src: 'index-production.html', dest: 'build/style.css' }
+                    { src: 'index-dev.html', dest: 'build/style.css' }
                 ]
             }
         },
@@ -15,10 +15,29 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        concat : {
+            dist : {
+                src: [
+                    'js/jquery.min.js', 'js/bootstrap.min.js', 'js/popper.min.js',
+                    'js/jquery.easing.min.js', 'js/scrollspy.min.js', 'js/typed.min.js',
+                    'js/jquery.magnific-popup.min.js', 'js/isotope.pkgd.min.js',
+                    'js/particles.min.js', 'js/particles.app.min.js', 'js/parallax.min.js',
+                    'js/owl.carousel.min.js', 'js/custom.js'
+                ],
+                dest : "build/app.js"
+            }
+        },
+        uglify: {
+            my_target: {
+                files: {
+                    'build/app.min.js': ['build/app.js']
+                }
+            }
+        },
         processhtml: {
             dist: {
                 files: [
-                    { src: 'index-production.html', dest: 'index.html' }
+                    { src: 'index-dev.html', dest: 'index.html' }
                 ]
             }
         }
@@ -27,8 +46,10 @@ module.exports = function (grunt) {
     // Load the plugins
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-processhtml');
 
     // Default tasks.
-    grunt.registerTask('default', ['uncss', 'cssmin', 'processhtml']);
+    grunt.registerTask('default', ['uncss', 'cssmin', 'concat', 'uglify','processhtml']);
 };
