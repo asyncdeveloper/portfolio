@@ -23,8 +23,6 @@
     17.RESPONSIVE
 ************************/
 
-
-
 /*======================
         1.BASIC
 ========================*/
@@ -215,7 +213,7 @@ button:focus {
 }
 
 .section-main-title {
-    max-width: 570px;
+    max-width: 770px;
 }
 
 .main-title-border::after,
@@ -444,7 +442,7 @@ button:focus {
 ============================*/
 
 .home-bg {
-    background-image: url(../images/home-bg.jpg);
+    background-image: url(../images/home-bg-3.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;

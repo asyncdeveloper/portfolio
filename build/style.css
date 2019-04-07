@@ -55,10 +55,6 @@ ul {
     margin-bottom: 1rem
 }
 
-b {
-    font-weight: bolder
-}
-
 a {
     color: #007bff;
     text-decoration: none;
@@ -1153,8 +1149,6 @@ button::-moz-focus-inner {
     17.RESPONSIVE
 ************************/
 
-
-
 /*======================
         1.BASIC
 ========================*/
@@ -1305,7 +1299,7 @@ button:focus {
 }
 
 .section-main-title {
-    max-width: 570px;
+    max-width: 770px;
 }
 
 .main-title-border::after,
@@ -1332,10 +1326,6 @@ button:focus {
 
 .btn {
     padding: 12px 26px;
-}
-
-.btn-rounded {
-    border-radius: 30px;
 }
 
 .btn-outline-custom {
@@ -1448,6 +1438,13 @@ button:focus {
         4.HOME
 ============================*/
 
+.home-bg {
+    background-image: url(../images/home-bg-3.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
 .home-table-center {
     display: table-cell;
     vertical-align: middle;
@@ -1514,12 +1511,11 @@ button:focus {
 
 /*----DEMO 7/8/9-----*/
 
-/*----DEMO 10/11/12/13----*/
-
-.jarallax{
-    background-size: cover;
-    background-position: center center;
+.clip-home{
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
 }
+
+/*----DEMO 10/11/12/13----*/
 
 /*----DEMO 14----*/
 
@@ -1787,11 +1783,14 @@ button:focus {
         font-size: 40px;
         line-height: 1.2;
     }
-    .h-100vh.jarallax{
+    .home-bg{
         padding: 110px 0 170px 0;
     }
     .h-100vh{
         height: auto;
+    }
+    .clip-home{
+        clip-path:none;
     }
     .custom-nav .navbar-brand.logo img {
         height: 26px;
