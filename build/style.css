@@ -1332,6 +1332,10 @@ button:focus {
     padding: 12px 26px;
 }
 
+.btn-rounded {
+    border-radius: 30px;
+}
+
 .btn-outline-custom {
     background-color: transparent;
     border: 2px solid #fff;
