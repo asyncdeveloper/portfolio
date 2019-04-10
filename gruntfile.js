@@ -18,9 +18,9 @@ module.exports = function (grunt) {
         concat : {
             dist : {
                 src: [
-                    'js/jquery.min.js', 'js/bootstrap.min.js', 'js/popper.min.js',
-                    'js/jquery.easing.min.js', 'js/scrollspy.min.js', 'js/typed.min.js',
-                    'js/jquery.magnific-popup.min.js', 'js/isotope.pkgd.min.js',
+                    'js/jquery.min.js', 'js/jquery-ui.min.js','js/bootstrap.min.js',
+                    'js/popper.min.js', 'js/jquery.easing.min.js', 'js/scrollspy.min.js',
+                    'js/typed.min.js', 'js/jquery.magnific-popup.min.js', 'js/isotope.pkgd.min.js',
                     'js/particles.min.js', 'js/particles.app.min.js', 'js/parallax.min.js',
                     'js/owl.carousel.min.js', 'js/custom.js'
                 ],
