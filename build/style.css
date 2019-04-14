@@ -676,36 +676,6 @@ textarea.form-control {
     cursor: pointer
 }
 
-.progress {
-    display: -ms-flexbox;
-    display: flex;
-    height: 1rem;
-    overflow: hidden;
-    font-size: .75rem;
-    background-color: #e9ecef;
-    border-radius: .25rem
-}
-
-.progress-bar {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    background-color: #007bff;
-    transition: width .6s ease
-}
-
-@media screen and (prefers-reduced-motion:reduce) {
-    .progress-bar {
-        transition: none
-    }
-}
-
 .close:not(:disabled):not(.disabled) {
     cursor: pointer
 }
@@ -734,12 +704,6 @@ textarea.form-control {
 
 .rounded {
     border-radius: .25rem!important
-}
-
-.clearfix::after {
-    display: block;
-    clear: both;
-    content: ""
 }
 
 .d-block {
@@ -802,6 +766,14 @@ textarea.form-control {
     margin-top: 3rem!important
 }
 
+.pb-0 {
+    padding-bottom: 0!important
+}
+
+.pl-0 {
+    padding-left: 0!important
+}
+
 .pt-4 {
     padding-top: 1.5rem!important
 }
@@ -836,10 +808,6 @@ textarea.form-control {
 
 .text-white {
     color: #fff!important
-}
-
-.text-dark {
-    color: #343a40!important
 }
 
 .text-muted {
@@ -906,12 +874,32 @@ textarea.form-control {
     -moz-osx-font-smoothing: grayscale
 }
 
+.mdi-bootstrap:before {
+    content: "\F6C5"
+}
+
 .mdi-git:before {
     content: "\F2A2"
 }
 
 .mdi-github-circle:before {
     content: "\F2A4"
+}
+
+.mdi-language-css3:before {
+    content: "\F31C"
+}
+
+.mdi-language-html5:before {
+    content: "\F31D"
+}
+
+.mdi-language-javascript:before {
+    content: "\F31E"
+}
+
+.mdi-language-php:before {
+    content: "\F31F"
 }
 
 .mdi-linkedin:before {
@@ -922,12 +910,24 @@ textarea.form-control {
     content: "\F35C"
 }
 
+.mdi-nodejs:before {
+    content: "\F399"
+}
+
+.mdi-react:before {
+    content: "\F707"
+}
+
 .mdi-twitter:before {
     content: "\F544"
 }
 
 .mdi-whatsapp:before {
     content: "\F5A3"
+}
+
+.mdi-wordpress:before {
+    content: "\F5B4"
 }
 
  
@@ -1150,7 +1150,8 @@ button::-moz-focus-inner {
     17.BLOG PAGE
         -SIDEBAR
         -BLOG SINGLE
-    17.RESPONSIVE
+    18.SKILL
+    19.RESPONSIVE
 ************************/
 
 /*======================
@@ -1280,10 +1281,6 @@ button:focus {
     padding-bottom: 80px;
     position: relative;
     background-color: #fff;
-}
-
-.text-dark {
-    color: #000 !important;
 }
 
 .text-muted {
@@ -1447,7 +1444,7 @@ button:focus {
 ============================*/
 
 .home-bg {
-    background-image: url(../images/home-bg-3.jpg);
+    background-image: url(../images/home-bg.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1535,16 +1532,6 @@ button:focus {
     max-width: 850px;
 }
 
-.skill-custom .progress {
-    height: 4px;
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
-
-.skill-custom .progress-bar {
-    background: #000;
-}
-
 /*==========================
         6.SERVICES
 ============================*/
@@ -1563,7 +1550,8 @@ button:focus {
 
 .bg-cta {
     position: relative;
-    background-image: url(../images/img-2.jpg);
+    /*background-image: url(../images/img-2.jpg);*/
+    background-image: url("../images/img-bg-work.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -1740,13 +1728,41 @@ button:focus {
 /*---BLOG SINGLE----*/
 
 /*==========================
-        18.RESPONSIVE
+        18.SKILLS
+============================*/
+
+.single_skill_info {
+    background-color: #fff;
+    box-shadow: 0 0 18px rgba(69, 39, 160, .1);
+    padding: 40px 20px 35px;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-align: center;
+    text-align: center;
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container a {
+    margin: 0 10px;
+}
+
+/*==========================
+        19.RESPONSIVE
 ============================*/
 
 @media (max-width: 768px) {
     .custom-nav {
-        margin-top: 0px;
-        padding: 10px 0px !important;
+        margin-top: 0;
+        padding: 10px 0 !important;
         background-color: #fff !important;
     }
     .custom-nav .navbar-nav li a:before {
@@ -1754,7 +1770,7 @@ button:focus {
         display: none;
     }
     .custom-nav .navbar-nav li a {
-        margin: 0 0px;
+        margin: 0 0;
         padding: 6px 0;
         color: rgba(0, 0, 0, 0.55) !important;
     }
@@ -1774,12 +1790,12 @@ button:focus {
         height: 26px;
     }
     .navbar-nav {
-        margin-top: 0px;
+        margin-top: 0;
     }
     .navbar-toggler {
         font-size: 29px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
         color: #000;
     }
     .header_title {
@@ -1812,5 +1828,29 @@ button:focus {
     }
     .work_menu li a {
         margin: 8px 10px;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .single_skill_info {
+        padding: 20px 15px 35px
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .single_skill_info {
+        margin-bottom: 30px
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .single_skill_info {
+        padding: 30px 15px 25px
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .flex-container a {
+        margin: 0 5px;
     }
 }
