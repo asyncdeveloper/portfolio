@@ -20,7 +20,8 @@
     17.BLOG PAGE
         -SIDEBAR
         -BLOG SINGLE
-    17.RESPONSIVE
+    18.SKILL
+    19.RESPONSIVE
 ************************/
 
 /*======================
@@ -442,7 +443,7 @@ button:focus {
 ============================*/
 
 .home-bg {
-    background-image: url(../images/home-bg-3.jpg);
+    background-image: url(../images/home-bg.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -710,7 +711,8 @@ button:focus {
 
 .bg-cta {
     position: relative;
-    background-image: url(../images/img-2.jpg);
+    /*background-image: url(../images/img-2.jpg);*/
+    background-image: url("../images/img-bg-work.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -1229,13 +1231,46 @@ button:focus {
 }
 
 /*==========================
-        18.RESPONSIVE
+        18.SKILLS
+============================*/
+
+.single_skill_info {
+    background-color: #fff;
+    box-shadow: 0 0 18px rgba(69, 39, 160, .1);
+    padding: 40px 20px 35px;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-align: center;
+    text-align: center;
+}
+
+.single_skill_info .info>p {
+    line-height: 25px;
+    margin-bottom: 0
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container a {
+    margin: 0 10px;
+}
+
+/*==========================
+        19.RESPONSIVE
 ============================*/
 
 @media (max-width: 768px) {
     .custom-nav {
-        margin-top: 0px;
-        padding: 10px 0px !important;
+        margin-top: 0;
+        padding: 10px 0 !important;
         background-color: #fff !important;
     }
     .custom-nav .navbar-nav li a:before {
@@ -1243,7 +1278,7 @@ button:focus {
         display: none;
     }
     .custom-nav .navbar-nav li a {
-        margin: 0 0px;
+        margin: 0 0;
         padding: 6px 0;
         color: rgba(0, 0, 0, 0.55) !important;
     }
@@ -1263,12 +1298,12 @@ button:focus {
         height: 26px;
     }
     .navbar-nav {
-        margin-top: 0px;
+        margin-top: 0;
     }
     .navbar-toggler {
         font-size: 29px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
         color: #000;
     }
     .header_title {
@@ -1319,5 +1354,29 @@ button:focus {
     }
     .blog_detail p.blockquote{
         font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .single_skill_info {
+        padding: 20px 15px 35px
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .single_skill_info {
+        margin-bottom: 30px
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .single_skill_info {
+        padding: 30px 15px 25px
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .flex-container a {
+        margin: 0 5px;
     }
 }
