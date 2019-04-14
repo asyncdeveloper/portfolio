@@ -69,13 +69,6 @@ $(window).on("scroll", function() {
     goToFirstSpeed: 2e3,
     singleItem: !0,
     autoHeight: !0
-}), $(".blog_play").magnificPopup({
-    disableOn: 700,
-    type: "iframe",
-    mainClass: "mfp-fade",
-    removalDelay: 160,
-    preloader: !1,
-    fixedContentPos: !1
 }), $(window).on("scroll", function() {
     $(this).scrollTop() > 100 ? $(".back_top").fadeIn() : $(".back_top").fadeOut()
 }), $(".back_top").click(function() {

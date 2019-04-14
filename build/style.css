@@ -766,10 +766,6 @@ textarea.form-control {
     margin-top: 3rem!important
 }
 
-.pb-0 {
-    padding-bottom: 0!important
-}
-
 .pl-0 {
     padding-left: 0!important
 }
@@ -1387,6 +1383,12 @@ button:focus {
     background-color: transparent;
 }
 
+.custom-nav.stickyadd {
+    background-color: #fff;
+    padding: 8px 0;
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+}
+
 .custom-nav .navbar-nav li a {
     color: #fff;
     font-size: 16px;
@@ -1400,11 +1402,15 @@ button:focus {
 
 .custom-nav .navbar-nav li.active a:before,
 .custom-nav .navbar-nav li:hover a:before,
-.custom-nav .navbar-nav li:active a:before {
+.custom-nav .navbar-nav li:active a:before,
+.custom-nav.stickyadd .navbar-nav li.active a:before,
+.custom-nav.stickyadd .navbar-nav li:hover a:before,
+.custom-nav.stickyadd .navbar-nav li:active a:before {
     opacity: 1;
 }
 
-.custom-nav .navbar-nav li a:before {
+.custom-nav .navbar-nav li a:before,
+.custom-nav.stickyadd .navbar-nav li a:before {
     content: '';
     position: absolute;
     left: 50%;
@@ -1420,6 +1426,10 @@ button:focus {
     transition: all 0.3s ease 0s;
 }
 
+.custom-nav.stickyadd .navbar-nav li a:before {
+    background: #000 !important;
+}
+
 .navbar-toggler {
     font-size: 24px;
     margin-top: 5px;
@@ -1427,8 +1437,20 @@ button:focus {
     color: #ffffff;
 }
 
+.custom-nav.stickyadd .navbar-nav li a {
+    color: #000;
+}
+
 .logo .logo-light {
     display: inline-block;
+}
+
+.stickyadd .logo .logo-dark {
+    display: inline-block;
+}
+
+.stickyadd .logo .logo-light {
+    display: none;
 }
 
 .logo .logo-dark {
