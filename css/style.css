@@ -1244,9 +1244,9 @@ button:focus {
     text-align: center;
 }
 
-.single_skill_info .info>p {
+.single_skill_info h6 {
     line-height: 25px;
-    margin-bottom: 0
+    margin-bottom: 15px;
 }
 
 .flex-container {
