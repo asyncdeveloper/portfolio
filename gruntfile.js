@@ -2,6 +2,12 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uncss: {
+            options: {
+                ignore: [
+                    new RegExp('^.tooltip.*'),
+                    new RegExp('^.bs-tooltip-auto.*')
+                ]
+            },
             dist: {
                 files: [
                     { src: 'index-dev.html', dest: 'build/style.css' }
