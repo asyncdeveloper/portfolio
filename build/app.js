@@ -188,4 +188,40 @@ $(".element").each(function() {
     } // End if
 }));
 
+//Tooltip
 $('[data-toggle="tooltip"]').tooltip();
+
+//Contact Form
+$('#contact-form').on('submit', function (e) {
+    e.preventDefault();
+    var url = "ajax/sendmail.php";
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: $(this).serialize(),
+        success: function (response) {
+            var message;
+            if(response.code === 1) {
+                message = '<div class="alert alert-success alert-dismissible" role="alert">\n'
+                    + response.message + '  <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                    '    <span aria-hidden="true">&times;</span>\n' +
+                    '  </button>\n' +
+                    '</div>';
+            } else if(response.code === 2) {
+                message = '<div class="alert  alert-danger alert-dismissible" role="alert">\n'
+                    + response.message + '  <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                    '    <span aria-hidden="true">&times;</span>\n' +
+                    '  </button>\n' +
+                    '</div>';
+            } else if(response.code === 3) {
+                message = '<div class="alert alert-danger alert-dismissible" role="alert">\n'
+                    + response.message + '  <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+                    '    <span aria-hidden="true">&times;</span>\n' +
+                    '  </button>\n' +
+                    '</div>';
+            }
+            $('form#contact-form>div.alert').remove();
+            $('form#contact-form').prepend(message);
+        }
+    });
+});

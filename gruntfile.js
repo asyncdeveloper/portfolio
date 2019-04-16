@@ -4,10 +4,9 @@ module.exports = function (grunt) {
         uncss: {
             options: {
                 ignore: [
-                    new RegExp('^.tooltip.*'),
-                    new RegExp('^.bs-tooltip-auto.*'),
-                    new RegExp('^.custom-nav.*'),
-                    new RegExp('^.stickyadd.*')
+                    new RegExp('^.tooltip.*'), new RegExp('^.bs-tooltip-auto.*'),
+                    new RegExp('^.custom-nav.*'), new RegExp('^.stickyadd.*'),
+                    new RegExp('^.alert.*'), new RegExp('^button.close.*')
                 ]
             },
             dist: {
