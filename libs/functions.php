@@ -1,6 +1,6 @@
 <?php
 
-function sendMail($request): string {
+function sendMail($request) {
     require "PHPMailer/PHPMailer.php";
     require "PHPMailer/SMTP.php";
 

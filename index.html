@@ -500,19 +500,19 @@
                                     <div class="col-lg-6">
                                         <div class="form-group mt-2">
                                             <label for="name" class="font-weight-bold">Name</label>
-                                            <input name="name" id="name" type="text" class="form-control" placeholder="Your name..."  >
+                                            <input name="name" id="name" type="text" class="form-control" placeholder="Your name..." required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group mt-2">
                                             <label for="email" class="font-weight-bold">Email address</label>
-                                            <input name="email" id="email" type="email" class="form-control" placeholder="Your email..." >
+                                            <input name="email" id="email" type="email" class="form-control" placeholder="Your email..." required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2">
                                             <label for="subject" class="font-weight-bold">Subject</label>
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Your Subject.." >
+                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Your Subject.." required="">
                                         </div>
                                     </div>
                                 </div>
@@ -520,13 +520,15 @@
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2">
                                             <label for="message" class="font-weight-bold">Message</label>
-                                            <textarea name="message" id="message" rows="4" class="form-control" placeholder="Your message..."></textarea>
+                                            <textarea name="message" id="message" rows="4" class="form-control" placeholder="Your message..." required=""></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 text-right">
-                                        <input type="submit" class="btn btn-custom" value="Send Message">
+                                        <button id="btn-submit" type="submit" class="btn btn-custom">
+                                            Send Message
+                                        </button>
                                     </div>
                                 </div>
                             </form>

@@ -9,28 +9,6 @@ $("#status").fadeOut(), $("#preloader").delay(350).fadeOut("slow"), $("body").de
     }, 1500, "easeInOutExpo"), e.preventDefault()
 }), $("#navbarCollapse").scrollspy({
     offset: 20
-});
-var a = 0;
-$(window).on("scroll", function() {
-    var e = $("#work").offset().top - window.innerHeight;
-    0 == a && $(window).scrollTop() > e && ($(".lan_fun_value").each(function() {
-        var e = $(this),
-            t = e.attr("data-count");
-        $({
-            countNum: e.text()
-        }).animate({
-            countNum: t
-        }, {
-            duration: 2e3,
-            easing: "swing",
-            step: function() {
-                e.text(Math.floor(this.countNum))
-            },
-            complete: function() {
-                e.text(this.countNum)
-            }
-        })
-    }), a = 1)
 }), $(window).on("load", function() {
     var e = $(".work-filter"),
         t = $("#menu-filter");
@@ -52,23 +30,6 @@ $(window).on("scroll", function() {
             }
         }), !1
     })
-}), $(".img-zoom").magnificPopup({
-    type: "image",
-    closeOnContentClick: !0,
-    mainClass: "mfp-fade",
-    gallery: {
-        enabled: !0,
-        navigateByImgClick: !0,
-        preload: [0, 1]
-    }
-}), $("#owl-demo").owlCarousel({
-    autoPlay: 7e3,
-    stopOnHover: !0,
-    navigation: !1,
-    paginationSpeed: 1e3,
-    goToFirstSpeed: 2e3,
-    singleItem: !0,
-    autoHeight: !0
 }), $(window).on("scroll", function() {
     $(this).scrollTop() > 100 ? $(".back_top").fadeIn() : $(".back_top").fadeOut()
 }), $(".back_top").click(function() {
@@ -129,11 +90,18 @@ $('[data-toggle="tooltip"]').tooltip();
 //Contact Form
 $('#contact-form').on('submit', function (e) {
     e.preventDefault();
+
+    //Add Loader
+    var submitBtn = $("#btn-submit");
+    submitBtn.attr("disabled", true);
+    var data = '<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading...';
+    submitBtn.html(data);
+
     var url = "ajax/sendmail.php";
     $.ajax({
         type: "POST",
         url: url,
-        data: $(this).serialize(),
+        data: $("#contact-form").serialize(),
         success: function (response) {
             var message;
             if(response.code === 1) {
@@ -166,6 +134,17 @@ $('#contact-form').on('submit', function (e) {
                 '</div>';
             $('form#contact-form>div.alert').remove();
             $('form#contact-form').prepend(message);
+        },
+        complete: function () {
+            //Remove Loader
+            submitBtn.attr("disabled", false);
+            var data = 'Send Message';
+            submitBtn.html(data);
+
+            //Scroll to Message
+            $('html, body').animate({
+                scrollTop: $("#contact").offset().top
+            }, 1000,"easeInOutExpo");
         }
     });
 });

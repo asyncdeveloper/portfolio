@@ -6,7 +6,8 @@ module.exports = function (grunt) {
                 ignore: [
                     new RegExp('^.tooltip.*'), new RegExp('^.bs-tooltip-auto.*'),
                     new RegExp('^.custom-nav.*'), new RegExp('^.stickyadd.*'),
-                    new RegExp('^.alert.*'), new RegExp('^button.close.*')
+                    new RegExp('^.alert.*'), new RegExp('^button.close.*'),
+                    new RegExp('^.spinner-grow.*')
                 ]
             },
             dist: {

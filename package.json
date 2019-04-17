@@ -1,5 +1,5 @@
 {
-  "name": "asynchronousdeveloper",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asynchronousdev/theasynchronousdeveloper.git"
+    "url": "git+https://github.com/asyncdeveloper/portfolio.git"
   },
   "author": "Oluwaseyi Adeogun",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/asynchronousdev/theasynchronousdeveloper/issues"
+    "url": "https://github.com/asyncdeveloper/portfolio/issues"
   },
-  "homepage": "https://github.com/asynchronousdev/theasynchronousdeveloper#readme",
+  "homepage": "https://github.com/asyncdeveloper/portfolio#readme",
   "devDependencies": {
     "canvas": "^2.4.1",
     "grunt": "^1.0.4",
