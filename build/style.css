@@ -1054,6 +1054,10 @@ button.close {
     margin-top: 3rem!important
 }
 
+.pb-0 {
+    padding-bottom: 0!important
+}
+
 .pl-0 {
     padding-left: 0!important
 }
