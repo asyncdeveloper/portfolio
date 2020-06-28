@@ -1190,6 +1190,10 @@ button.close {
     content: "\F31F"
 }
 
+.mdi-language-typescript:before {
+    content: "\F6E5"
+}
+
 .mdi-linkedin:before {
     content: "\F33B"
 }
